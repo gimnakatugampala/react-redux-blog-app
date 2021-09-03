@@ -9,7 +9,6 @@ import ProjectDetails from './components/projects/ProjectDetails'
 
 
 
-
 const App = () => {
     return (
         <BrowserRouter>
