@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
 
 const App = () => {
     return (
         <BrowserRouter>
         <div>
-            <h1>React Redux  With Firebase Project</h1>
+            <Navbar /> 
         </div>
         </BrowserRouter>
     )
