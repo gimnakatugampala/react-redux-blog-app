@@ -6,6 +6,7 @@ const ProjectList = () => {
         <div className="project-list section">
             <ProjectSummary/>
             <ProjectSummary/>
+            <ProjectSummary/>
         </div>
     )
 }
