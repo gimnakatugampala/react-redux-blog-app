@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import {connect} from 'react-redux'
+import { createProject } from '../../store/actions/projectActions'
 
-const CreateProject = () => {
+
+const CreateProject = (props) => {
 
    
     const [title, settitle] = useState('')
@@ -15,7 +18,9 @@ const CreateProject = () => {
             content
        }
 
-       console.log(cred)
+    //    console.log(props)
+
+       props.createProject(cred)
     }
 
     return (
@@ -39,4 +44,6 @@ const CreateProject = () => {
     )
 }
 
-export default CreateProject
+const mapDispatchToProps = (dispatch) => ({ createProject:(project) => dispatch(createProject(project)) })
+
+export default connect(null,mapDispatchToProps)(CreateProject)
