@@ -10,7 +10,7 @@ const ProjectList = ({projects}) => {
         <div className="project-list section">
 
             {projects && projects.map((project) => (
-                <Link to={'/project/'+ project.id}>
+                <Link to={'/project/'+ project.id} key={project.id}>
                 <ProjectSummary key={project.id} project={project}  />
                 </Link>
             ))}
