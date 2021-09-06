@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
-const SignUp = () => {
+
+const SignUp = ({auth}) => {
 
    
     const [email, setemail] = useState('')
@@ -20,6 +23,9 @@ const SignUp = () => {
 
        console.log(cred)
     }
+
+    if(auth.uid) return <Redirect to="/" />
+
 
     return (
         <div className="container">
@@ -50,4 +56,10 @@ const SignUp = () => {
     )
 }
 
-export default SignUp
+const mapStateToProps = (state)=>{
+    return{
+        auth:state.firebase.auth
+    }
+}
+
+export default connect(mapStateToProps)(SignUp)
