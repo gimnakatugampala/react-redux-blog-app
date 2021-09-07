@@ -24,8 +24,10 @@ const CreateProject = (props) => {
     //    console.log(props)
 
        props.createProject(cred)
+       props.history.push('/')
 
     }
+
     if(!auth.uid) return <Redirect to="/signin" />
 
     return (
