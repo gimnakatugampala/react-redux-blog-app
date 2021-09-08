@@ -4,12 +4,12 @@ import 'firebase/compat/auth';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCEK7qaAuqnqmSew9-j1iCEFnQyhuAHw9c",
-  authDomain: "blognet2021.firebaseapp.com",
-  projectId: "blognet2021",
-  storageBucket: "blognet2021.appspot.com",
-  messagingSenderId: "772581789075",
-  appId: "1:772581789075:web:6d68798eea48a09d532c66"
+  apiKey: "AIzaSyCyI4Xi6ytFBSXyr_xErX2p6BorLY_mLoM",
+  authDomain: "socialbook-287a9.firebaseapp.com",
+  projectId: "socialbook-287a9",
+  storageBucket: "socialbook-287a9.appspot.com",
+  messagingSenderId: "224862278485",
+  appId: "1:224862278485:web:7a89be4b45e0de2fdfd5dc"
 };
 
 

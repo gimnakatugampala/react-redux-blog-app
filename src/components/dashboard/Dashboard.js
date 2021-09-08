@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import ProjectList from '../projects/ProjectList'
 import Notifications from './Notifications'
@@ -11,6 +11,30 @@ import { Redirect } from 'react-router-dom'
 
 const Dashboard = ({projects,auth}) => {
 
+    const [notifications, setnotifications] = useState([])
+
+        setInterval(() =>{
+
+            fetch('https://social-blog2021.herokuapp.com/notifications')
+            .then(res => res.json())
+            .then(data => setnotifications(data))
+         
+
+        },3000)
+
+            
+     
+        // setInterval(() =>{
+        //     fetch('https://social-blog2021.herokuapp.com/notifications')
+        //     .then(res => res.json())
+        //     .then(data => setnotifications(data))
+    
+    
+        // }, 5000)
+    
+
+    
+    
     if(!auth.uid) return <Redirect to="/signin" />
 
     return (
@@ -20,7 +44,7 @@ const Dashboard = ({projects,auth}) => {
                     <ProjectList projects={projects} />
                 </div>
                 <div className="col 12 m5 offset-m1">
-                    <Notifications/>
+                    <Notifications notifications={notifications} />
                 </div>
             </div>
         </div>
