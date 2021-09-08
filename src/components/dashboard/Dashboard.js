@@ -32,11 +32,7 @@ const Dashboard = ({projects,auth}) => {
             fetch('https://socialbook2021.herokuapp.com/notifications')
             .then(res => res.json())
             .then(data => setnotifications(data))
-            
-            fetch('https://socialbook2021.herokuapp.com/trends')
-            .then(res => res.json())
-            .then(data => settrendings(data))
-    
+
         }, 100000)
     
 
@@ -50,7 +46,7 @@ const Dashboard = ({projects,auth}) => {
                 <div className="col 12 m6">
                     <ProjectList projects={projects} />
                 </div>
-                <div className="col 12 m5 offset-m1">
+                <div className="col 12 m5  offset-m1">
                     <Notifications notifications={notifications} />
                 </div>
                 <div className="col 12 m5 offset-m1">

@@ -12,7 +12,7 @@ import ProjectDetails from './components/projects/ProjectDetails'
 const App = () => {
     return (
         <BrowserRouter>
-        <div style={{backgroundColor:'#ccc',height:'100vh'}}>
+        <div style={{backgroundColor:'#ccc',height:'200vh'}}>
             <Navbar /> 
             <Switch>
                 <Route exact path='/' component={Dashboard} /> 

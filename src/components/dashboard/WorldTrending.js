@@ -2,9 +2,6 @@ import React from 'react'
 
 const WorldTrending = ({trendings}) => {
 
-
-
-
     return (
         <div className="section">
         <div className="card z-depth-0">
