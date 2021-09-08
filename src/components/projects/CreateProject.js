@@ -32,7 +32,7 @@ const CreateProject = (props) => {
 
     return (
         <div className="container">
-            <form onSubmit={handleSubmit} className="white">
+            <form onSubmit={handleSubmit} className="white" style={{padding:'20px',margin:'20px'}}>
                 <h5 className="grey-text text-darken-3">Create Post</h5>
                 <div className="input-field">
                     <label htmlFor="title">Title</label>
@@ -44,7 +44,7 @@ const CreateProject = (props) => {
                 </div>
                 
                 <div className="input-field">
-                    <button className="btn pink lighten-1 z-depth-0">Create</button>
+                    <button className="btn primary lighten-1 z-depth-0">Create</button>
                 </div>
             </form>
         </div>  
