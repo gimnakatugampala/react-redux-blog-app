@@ -13,24 +13,22 @@ const Dashboard = ({projects,auth}) => {
 
     const [notifications, setnotifications] = useState([])
 
-        setInterval(() =>{
-
-            fetch('https://social-blog2021.herokuapp.com/notifications')
-            .then(res => res.json())
-            .then(data => setnotifications(data))
+       
+        //     useEffect(() => {
+        //         fetch('https://socialbook2021.herokuapp.com/notifications')
+        //         .then(res => res.json())
+        //         .then(data => setnotifications(data))
+              
+        //     }, [])
+           
          
-
-        },3000)
-
-            
-     
         // setInterval(() =>{
-        //     fetch('https://social-blog2021.herokuapp.com/notifications')
+        //     fetch('https://socialbook2021.herokuapp.com/notifications')
         //     .then(res => res.json())
         //     .then(data => setnotifications(data))
     
     
-        // }, 5000)
+        // }, 100000)
     
 
     

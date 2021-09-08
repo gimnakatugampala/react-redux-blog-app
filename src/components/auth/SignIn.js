@@ -29,8 +29,8 @@ const SignIn = (props) => {
 
     return (
 
-        <div className="container">
-            <form onSubmit={handleSubmit} className="white">
+        <div className="container" >
+            <form onSubmit={handleSubmit} className="white" style={{padding:'20px',margin:'20px'}}>
                 <h5 className="grey-text text-darken-3">Sign In</h5>
                 <div className="input-field">
                     <label htmlFor="email">Email</label>
@@ -41,7 +41,7 @@ const SignIn = (props) => {
                     <input type="password" id="password" onChange={(e) => setpassword(e.target.value)} />
                 </div>
                 <div className="input-field">
-                    <button className="btn pink lighten-1 z-depth-0">Login</button>
+                    <button className="btn primary lighten-1 z-depth-0">Login</button>
                     <div className="red-text center">
                     {authError ? <p> {authError}</p> : null}
                     </div>

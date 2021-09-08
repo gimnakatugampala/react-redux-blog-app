@@ -5,7 +5,7 @@ const Notifications = ({notifications}) => {
 
   console.log(notifications)
 
-  let results = notifications.slice(0,4).reverse()
+  let results = notifications.slice(0,4).sort((a,b) => a.createdAt - b.createdAt)
 
     return (
        <div className="section">
@@ -15,7 +15,7 @@ const Notifications = ({notifications}) => {
           <ul className="online-users">
             { results && results.map((item,index) =>{
               return <li key={index}>
-                <span className="pink-text">{item.user} </span>
+                <span className="blue-text">{item.user} </span>
                 <span>{item.content}</span>
                 <div className="note-date grey-text">{item.createdAt}</div>
               </li>

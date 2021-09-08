@@ -31,7 +31,7 @@ const SignUp = ({auth,signUp,authError}) => {
 
     return (
         <div className="container">
-            <form onSubmit={handleSubmit} className="white">
+            <form onSubmit={handleSubmit} className="white" style={{padding:'20px',margin:'20px'}}>
                 <h5 className="grey-text text-darken-3">Sign Up</h5>
                 <div className="input-field">
                     <label htmlFor="firstName">First Name</label>
@@ -50,7 +50,7 @@ const SignUp = ({auth,signUp,authError}) => {
                     <input type="password" id="password" onChange={(e) => setpassword(e.target.value)} />
                 </div>
                 <div className="input-field">
-                    <button className="btn pink lighten-1 z-depth-0">Sign Up</button>
+                    <button className="btn primary lighten-1 z-depth-0">Sign Up</button>
                     <div className="red-text center">
                         {authError ? <p>{authError}</p> : null}
                     </div>
